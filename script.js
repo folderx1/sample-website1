@@ -2,7 +2,7 @@
 
 // IMPORTANT: Replace this with the actual URL of your deployed backend server!
 // Example: const BACKEND_URL = 'https://your-deployed-backend-app.com';
-const BACKEND_URL = 'http://localhost:5000'; // Keep this for local testing, change for deployment
+const BACKEND_URL = 'https://sample-website-a5b7ec576406.herokuapp.com/'; // Keep this for local testing, change for deployment
 
 document.addEventListener('DOMContentLoaded', () => {
     // Get references to the mobile menu button and the mobile menu itself
@@ -229,3 +229,4 @@ document.addEventListener('DOMContentLoaded', () => {
         }, 5000);
     }
 });
+
