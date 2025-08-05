@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Cozy Inn - Login</title>
+    <!-- Link to Tailwind CSS CDN for easy styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Custom CSS for additional styles -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts - Inter for a modern look -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Apply Inter font family globally */
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+    <!-- Header Section for Login Page -->
+    <header class="bg-white shadow-md py-4 px-6 md:px-12 fixed w-full z-10">
+        <nav class="container mx-auto flex justify-between items-center">
+            <!-- Logo or Inn Name -->
+            <a href="index.html" class="text-2xl font-bold text-indigo-700 rounded-md p-2">The Cozy Inn</a>
+
+            <!-- Navigation Links (simplified for login page) -->
+            <ul class="flex space-x-6">
+                <li><a href="index.html" class="text-gray-600 hover:text-indigo-700 transition duration-300 ease-in-out rounded-md p-2 hover:bg-indigo-50">Home</a></li>
+                <li><a href="signup.html" class="text-gray-600 hover:text-indigo-700 transition duration-300 ease-in-out rounded-md p-2 hover:bg-indigo-50">Sign Up</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Login Section -->
+    <section id="login" class="py-16 bg-gray-50 min-h-screen flex items-center justify-center">
+        <div class="container mx-auto px-6 md:px-12">
+            <h2 class="text-3xl md:text-4xl font-bold text-center text-indigo-700 mb-10">Member Login</h2>
+            <div class="max-w-md mx-auto bg-white p-8 rounded-lg shadow-xl">
+                <form id="login-form" class="space-y-6">
+                    <div>
+                        <label for="login-email" class="block text-sm font-medium text-gray-700 mb-1">Email Address</label>
+                        <input type="email" id="login-email" name="login-email" required
+                               class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+                    </div>
+                    <div>
+                        <label for="login-password" class="block text-sm font-medium text-gray-700 mb-1">Password</label>
+                        <input type="password" id="login-password" name="login-password" required
+                               class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+                    </div>
+                    <div>
+                        <button type="submit"
+                                class="w-full flex justify-center py-3 px-4 border border-transparent rounded-md shadow-sm text-lg font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 transition duration-300 ease-in-out transform hover:scale-105">
+                            Log In
+                        </button>
+                    </div>
+                </form>
+                <!-- Login Message -->
+                <div id="login-message" class="hidden mt-6 p-4 text-center rounded-md border"></div>
+                <p class="mt-4 text-center text-gray-600 text-sm">
+                    Don't have an account? <a href="signup.html" class="text-indigo-600 hover:underline">Sign Up</a>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section (simple footer for now) -->
+    <section id="contact" class="py-12 bg-indigo-800 text-white">
+        <div class="container mx-auto px-6 md:px-12 text-center">
+            <h2 class="text-2xl font-bold mb-4">Contact Us</h2>
+            <p class="mb-2">Email: info@thecozyinn.com</p>
+            <p class="mb-2">Phone: +1 (123) 456-7890</p>
+            <p class="mb-4">Address: 123 Inn Street, Cozy Town, CT 98765</p>
+            <p>&copy; 2025 The Cozy Inn. All rights reserved.</p>
+        </div>
+    </section>
+
+    <!-- Link to custom JavaScript file -->
+    <script src="script.js"></script>
+</body>
+</html>

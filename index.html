@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Cozy Inn - Reservations</title>
+    <!-- Link to Tailwind CSS CDN for easy styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Custom CSS for additional styles -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts - Inter for a modern look -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Apply Inter font family globally */
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+    <!-- Header Section -->
+    <header class="bg-white shadow-md py-4 px-6 md:px-12 fixed w-full z-10">
+        <nav class="container mx-auto flex justify-between items-center">
+            <!-- Logo or Inn Name -->
+            <a href="#" class="text-2xl font-bold text-indigo-700 rounded-md p-2">The Cozy Inn</a>
+
+            <!-- Mobile Menu Button (Hamburger Icon) -->
+            <button id="mobile-menu-button" class="md:hidden focus:outline-none">
+                <svg class="w-6 h-6 text-indigo-700" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                </svg>
+            </button>
+
+            <!-- Navigation Links -->
+            <ul id="main-nav" class="hidden md:flex space-x-6">
+                <li><a href="#home" class="text-gray-600 hover:text-indigo-700 transition duration-300 ease-in-out rounded-md p-2 hover:bg-indigo-50">Home</a></li>
+                <li><a href="#about" class="text-gray-600 hover:text-indigo-700 transition duration-300 ease-in-out rounded-md p-2 hover:bg-indigo-50">About Us</a></li>
+                <li><a href="#rooms" class="text-gray-600 hover:text-indigo-700 transition duration-300 ease-in-out rounded-md p-2 hover:bg-indigo-50">Rooms</a></li>
+                <li><a href="#reservation" class="text-gray-600 hover:text-indigo-700 transition duration-300 ease-in-out rounded-md p-2 hover:bg-indigo-50">Reservation</a></li>
+                <li><a href="#contact" class="text-gray-600 hover:text-indigo-700 transition duration-300 ease-in-out rounded-md p-2 hover:bg-indigo-50">Contact</a></li>
+                <!-- Links to separate Login and Sign Up pages -->
+                <li><a href="login.html" class="text-gray-600 hover:text-indigo-700 transition duration-300 ease-in-out rounded-md p-2 hover:bg-indigo-50">Login</a></li>
+                <li><a href="signup.html" class="text-gray-600 hover:text-indigo-700 transition duration-300 ease-in-out rounded-md p-2 hover:bg-indigo-50">Sign Up</a></li>
+            </ul>
+        </nav>
+
+        <!-- Mobile Navigation Menu (hidden by default) -->
+        <div id="mobile-menu" class="md:hidden hidden bg-white mt-4 rounded-md shadow-lg">
+            <ul class="flex flex-col space-y-2 p-4">
+                <li><a href="#home" class="block text-gray-600 hover:text-indigo-700 transition duration-300 ease-in-out rounded-md p-2 hover:bg-indigo-50">Home</a></li>
+                <li><a href="#about" class="block text-gray-600 hover:text-indigo-700 transition duration-300 ease-in-out rounded-md p-2 hover:bg-indigo-50">About Us</a></li>
+                <li><a href="#rooms" class="block text-gray-600 hover:text-indigo-700 transition duration-300 ease-in-out rounded-md p-2 hover:bg-indigo-50">Rooms</a></li>
+                <li><a href="#reservation" class="block text-gray-600 hover:text-indigo-700 transition duration-300 ease-in-out rounded-md p-2 hover:bg-indigo-50">Reservation</a></li>
+                <li><a href="#contact" class="block text-gray-600 hover:text-indigo-700 transition duration-300 ease-in-out rounded-md p-2 hover:bg-indigo-50">Contact</a></li>
+                <!-- Links to separate Login and Sign Up pages for Mobile -->
+                <li><a href="login.html" class="block text-gray-600 hover:text-indigo-700 transition duration-300 ease-in-out rounded-md p-2 hover:bg-indigo-50">Login</a></li>
+                <li><a href="signup.html" class="block text-gray-600 hover:text-indigo-700 transition duration-300 ease-in-out rounded-md p-2 hover:bg-indigo-50">Sign Up</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative h-screen bg-cover bg-center flex items-center justify-center text-white"
+        style="background-image: url('https://placehold.co/1920x1080/6366F1/FFFFFF?text=Welcome+to+The+Cozy+Inn');">
+        <!-- Overlay for better text readability -->
+        <div class="absolute inset-0 bg-black opacity-50 rounded-md"></div>
+        <div class="relative z-10 text-center p-4">
+            <h1 class="text-4xl md:text-6xl font-extrabold mb-4 animate-fade-in-down">Discover Your Perfect Getaway</h1>
+            <p class="text-lg md:text-xl mb-8 animate-fade-in-up">Experience comfort, tranquility, and exceptional service.</p>
+            <a href="#reservation" class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-8 rounded-full shadow-lg transition duration-300 ease-in-out transform hover:scale-105">Book Your Stay Now</a>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="py-16 bg-white">
+        <div class="container mx-auto px-6 md:px-12">
+            <h2 class="text-3xl md:text-4xl font-bold text-center text-indigo-700 mb-10">About The Cozy Inn</h2>
+            <div class="flex flex-col md:flex-row items-center gap-8">
+                <div class="md:w-1/2">
+                    <img src="https://placehold.co/600x400/818CF8/FFFFFF?text=Cozy+Inn+Lobby" alt="Inn Lobby" class="rounded-lg shadow-xl w-full h-auto object-cover">
+                </div>
+                <div class="md:w-1/2 text-lg leading-relaxed text-gray-700">
+                    <p class="mb-4">
+                        Nestled in the heart of a serene landscape, The Cozy Inn offers a unique blend of rustic charm and modern amenities. Our mission is to provide an unforgettable experience, where every guest feels at home, surrounded by warmth and comfort.
+                    </p>
+                    <p class="mb-4">
+                        From our meticulously designed rooms to our personalized service, every detail is crafted to ensure your stay is nothing short of perfect. Whether you're seeking a peaceful retreat or an adventurous escape, The Cozy Inn is your ideal destination.
+                    </p>
+                    <p>
+                        We pride ourselves on our commitment to hospitality and creating lasting memories for our guests. Come and discover the magic of The Cozy Inn.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rooms Section -->
+    <section id="rooms" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-6 md:px-12">
+            <h2 class="text-3xl md:text-4xl font-bold text-center text-indigo-700 mb-10">Our Comfortable Rooms</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Room Card 1 -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden transform transition duration-300 hover:scale-105">
+                    <img src="https://placehold.co/400x250/C7D2FE/FFFFFF?text=Standard+Room" alt="Standard Room" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-indigo-700 mb-2">Standard Room</h3>
+                        <p class="text-gray-600 mb-4">
+                            Cozy and comfortable, perfect for solo travelers or couples. Features a queen-sized bed and a private bathroom.
+                        </p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-2xl font-bold text-indigo-600">$120/night</span>
+                            <a href="#reservation" class="bg-indigo-500 hover:bg-indigo-600 text-white py-2 px-4 rounded-full text-sm font-semibold transition duration-300">Book Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Room Card 2 -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden transform transition duration-300 hover:scale-105">
+                    <img src="https://placehold.co/400x250/C7D2FE/FFFFFF?text=Deluxe+Room" alt="Deluxe Room" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-indigo-700 mb-2">Deluxe Room</h3>
+                        <p class="text-gray-600 mb-4">
+                            Spacious and elegant, with a king-sized bed, seating area, and scenic views.
+                        </p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-2xl font-bold text-indigo-600">$180/night</span>
+                            <a href="#reservation" class="bg-indigo-500 hover:bg-indigo-600 text-white py-2 px-4 rounded-full text-sm font-semibold transition duration-300">Book Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Room Card 3 -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden transform transition duration-300 hover:scale-105">
+                    <img src="https://placehold.co/400x250/C7D2FE/FFFFFF?text=Family+Suite" alt="Family Suite" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-indigo-700 mb-2">Family Suite</h3>
+                        <p class="text-gray-600 mb-4">
+                            Ideal for families, featuring two bedrooms, a living room, and a fully equipped kitchenette.
+                        </p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-2xl font-bold text-indigo-600">$250/night</span>
+                            <a href="#reservation" class="bg-indigo-500 hover:bg-indigo-600 text-white py-2 px-4 rounded-full text-sm font-semibold transition duration-300">Book Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reservation Section -->
+    <section id="reservation" class="py-16 bg-white">
+        <div class="container mx-auto px-6 md:px-12">
+            <h2 class="text-3xl md:text-4xl font-bold text-center text-indigo-700 mb-10">Make a Reservation</h2>
+            <div class="max-w-2xl mx-auto bg-gray-50 p-8 rounded-lg shadow-xl">
+                <form id="reservation-form" class="space-y-6">
+                    <div>
+                        <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Full Name</label>
+                        <input type="text" id="name" name="name" required
+                               class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+                    </div>
+                    <div>
+                        <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email Address</label>
+                        <input type="email" id="email" name="email" required
+                               class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+                    </div>
+                    <div>
+                        <label for="phone" class="block text-sm font-medium text-gray-700 mb-1">Phone Number</label>
+                        <input type="tel" id="phone" name="phone"
+                               class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label for="check-in" class="block text-sm font-medium text-gray-700 mb-1">Check-in Date</label>
+                            <input type="date" id="check-in" name="check-in" required
+                                   class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+                        </div>
+                        <div>
+                            <label for="check-out" class="block text-sm font-medium text-gray-700 mb-1">Check-out Date</label>
+                            <input type="date" id="check-out" name="check-out" required
+                                   class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label for="guests" class="block text-sm font-medium text-gray-700 mb-1">Number of Guests</label>
+                            <input type="number" id="guests" name="guests" min="1" value="1" required
+                                   class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+                        </div>
+                        <div>
+                            <label for="room-type" class="block text-sm font-medium text-gray-700 mb-1">Room Type</label>
+                            <select id="room-type" name="room-type" required
+                                    class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+                                <option value="">Select a room type</option>
+                                <option value="standard">Standard Room</option>
+                                <option value="deluxe">Deluxe Room</option>
+                                <option value="family">Family Suite</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div>
+                        <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Special Requests (Optional)</label>
+                        <textarea id="message" name="message" rows="4"
+                                  class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"></textarea>
+                    </div>
+                    <div>
+                        <button type="submit"
+                                class="w-full flex justify-center py-3 px-4 border border-transparent rounded-md shadow-sm text-lg font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 transition duration-300 ease-in-out transform hover:scale-105">
+                            Confirm Reservation
+                        </button>
+                    </div>
+                </form>
+                <!-- Reservation Confirmation Message -->
+                <div id="confirmation-message" class="hidden mt-6 p-4 bg-green-100 text-green-800 rounded-md border border-green-200 text-center">
+                    Your reservation request has been sent! We will contact you shortly to confirm.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section (simple footer for now) -->
+    <section id="contact" class="py-12 bg-indigo-800 text-white">
+        <div class="container mx-auto px-6 md:px-12 text-center">
+            <h2 class="text-2xl font-bold mb-4">Contact Us</h2>
+            <p class="mb-2">Email: info@thecozyinn.com</p>
+            <p class="mb-2">Phone: +1 (123) 456-7890</p>
+            <p class="mb-4">Address: 123 Inn Street, Cozy Town, CT 98765</p>
+            <p>&copy; 2025 The Cozy Inn. All rights reserved.</p>
+        </div>
+    </section>
+
+    <!-- Link to custom JavaScript file -->
+    <script src="script.js"></script>
+</body>
+</html>
